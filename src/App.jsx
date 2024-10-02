@@ -1,11 +1,52 @@
+const student =[
+  {
+    "rolleno":121,
+    "name":"jitu",
+    "city":"betul"
+  },
 
-const subject=["php","python","java","orecal"];
+  {
+    "rolleno":122,
+    "name":"ritu",
+    "city":"bhopal"
+  },
+
+  {
+    "rolleno":124,
+    "name":"gitu",
+    "city":"indore"
+  },
+
+  {
+    "rolleno":125,
+    "name":"nitu",
+    "city":"bhopal"
+  }
+]
+const data=student.map((key)=>{
+  return(
+    <>
+    <tr>
+      <td>{key.rolleno}</td>
+      <td>{key.name}</td>
+      <td>{key.city}</td>
+    </tr>
+    
+    </>
+  )
+})
+
+
 const App=()=>{
-const student=subject.map((key)=> <li>{key}</li>)
-
-return(
-  <>
-<ol>{student}</ol>
-  </>
-)}
+  return(
+    <>
+    <table>
+    <th>ROLLNO</th>
+    <th>NAME</th>
+    <th>CITY</th>
+    {data}
+    </table>
+    </>
+  )
+}
 export default App;
