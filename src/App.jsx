@@ -1,17 +1,11 @@
-const App=()=>{
-  const naam=["ranju","manju","ganju","ranju"]
 
-  const colec=naam.map((idea)=>{
-    return(
-      <>
-         <h1>{idea}</h1>
-      </>
-    )
-  })
-  return(
-    <>
-      {colec}
-    </>
-  )
-}
+const subject=["php","python","java","orecal"];
+const App=()=>{
+const student=subject.map((key)=> <li>{key}</li>)
+
+return(
+  <>
+<ol>{student}</ol>
+  </>
+)}
 export default App;
