@@ -1,51 +1,15 @@
-const student =[
-  {
-    "rolleno":121,
-    "name":"jitu",
-    "city":"betul"
-  },
-
-  {
-    "rolleno":122,
-    "name":"ritu",
-    "city":"bhopal"
-  },
-
-  {
-    "rolleno":124,
-    "name":"gitu",
-    "city":"indore"
-  },
-
-  {
-    "rolleno":125,
-    "name":"nitu",
-    "city":"bhopal"
-  }
-]
-const data=student.map((key)=>{
-  return(
-    <>
-    <tr>
-      <td>{key.rolleno}</td>
-      <td>{key.name}</td>
-      <td>{key.city}</td>
-    </tr>
-    
-    </>
-  )
-})
-
+import { useState } from "react";
 
 const App=()=>{
+  const [color,setColor]=useState("red")
+
   return(
     <>
-    <table>
-    <th>ROLLNO</th>
-    <th>NAME</th>
-    <th>CITY</th>
-    {data}
-    </table>
+    <h1 style={{backgroundColor:color}}>set color: {color}</h1>
+    <button onClick={()=>{setColor("green")}}>green</button>
+    <button onClick={()=>{setColor("yellow")}}>yellow</button>
+    <button onClick={()=>{setColor("black")}}>black</button>
+    <button onClick={()=>{setColor("blue")}}>blue</button>
     </>
   )
 }
