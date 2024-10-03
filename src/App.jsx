@@ -1,16 +1,16 @@
-
 import { useState } from "react";
 
 const App=()=>{
-  const [city,setCity]=useState()
-  const myCity=()=>{
-    setCity("indore")
+  const [name, setName]=useState("najneen")
+  
+  const myName=()=>{
+    setName("gouri")
   }
   return(
     <>
-    <h1>my city: {city}</h1>
-    <button onClick={myCity}>click here</button>
-    <button onClick={()=>{setCity("goa")}}>click</button>
+   <h1>wellcome to use status</h1>
+   <h1>my name : {name}</h1>
+   <button onClick={myName}>change name</button>
     </>
   )
 }
