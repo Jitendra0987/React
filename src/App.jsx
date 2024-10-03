@@ -1,16 +1,17 @@
+
 import { useState } from "react";
 
 const App=()=>{
-  const [color,setColor]=useState("red")
-
-  return(
-    <>
-    <h1 style={{backgroundColor:color}}>set color: {color}</h1>
-    <button onClick={()=>{setColor("green")}}>green</button>
-    <button onClick={()=>{setColor("yellow")}}>yellow</button>
-    <button onClick={()=>{setColor("black")}}>black</button>
-    <button onClick={()=>{setColor("blue")}}>blue</button>
-    </>
-  )
+  const [city,setCity]=useState()
+  const myCity=()=>{
+    setCity("indore")
+  }
+  return(
+    <>
+    <h1>my city: {city}</h1>
+    <button onClick={myCity}>click here</button>
+    <button onClick={()=>{setCity("goa")}}>click</button>
+    </>
+  )
 }
 export default App;
