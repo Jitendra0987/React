@@ -1,17 +1,18 @@
-import { useState,useEffect } from "react";
-const App=()=>{
-  
-    const [cnt, setCnt]=useState(0)
+import { useEffect, useState } from "react";
 
-    useEffect(()=>{
-        
-        setTimeout(()=>{
-            setCnt(cnt+1)
-        },2000);
-    })
+
+const App=()=>{
+const [cnt,setCnt]=useState(0)
+
+   useEffect(()=>{
+    setCnt(cnt+1)
+   },[])
+
     return(
         <>
-        <h1>wellcome to {cnt}</h1>
+        
+      <h1>wellcome to   {cnt}</h1>
+      
         </>
     )
 }
