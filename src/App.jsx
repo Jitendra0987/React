@@ -1,29 +1,17 @@
-import { useState } from "react";
-
+import { useState,useEffect } from "react";
 const App=()=>{
-const [cnt, setCnt]=useState(0);
-const myDcrement =()=>{
+  
+    const [cnt, setCnt]=useState(0)
 
-    if(cnt<=1)
-    {
-        alert("No decrese minus value")
-    }
-
-    else
-    {
-        setCnt(cnt-1)
-    }
-}
-
+    useEffect(()=>{
+        
+        setTimeout(()=>{
+            setCnt(cnt+1)
+        },2000);
+    })
     return(
         <>
-        <center>
-       <h1>counter App</h1>
-       <h1>count : {cnt}</h1>
-       <button onClick={()=>{setCnt(cnt+1)}}>increment</button>
-       <button onClick={myDcrement}>Decrement</button>
-       <button onClick={()=>{setCnt(0)}}>Reset</button>
-       </center>
+        <h1>wellcome to {cnt}</h1>
         </>
     )
 }
