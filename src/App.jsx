@@ -1,45 +1,26 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Display from "./pages/Display";
+import Insert from "./pages/Insert";
+import  Layout  from "./Layout";
+import Home from "./pages/home";
+
+
 
 
 const App=()=>{
-    const[mydata,setData]=useState([]);
-
-    const loaddata=async()=>{
-        let api="http://localhost:3000/data"
-         const response=await  axios.get(api);
-         setData(response.data)
-         console.log(response)
-    }
-
-    useEffect(()=>{
-        loaddata();
-    },[])
-
-    const ans=mydata.map((key)=>{
-        return(
-            <>
-            <tr>
-                <td>{key.id}</td>
-                <td>{key.rollno}</td>
-                <td>{key.name}</td>
-                <td>{key.contact}</td>
-            </tr>
-            </>
-        )
-    })
-
     return(
         <>
-           <table>
-            <tr>
-                <th>id</th>
-                <th>rollno</th>
-                <th>name</th>
-                <th>contact</th>
-            </tr>
-            {ans}
-           </table>
+        <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Layout/>}>
+            <Route index  element={<Home/>}/>
+            <Route path="home" element={<Home/>}/>
+            <Route path="insert" element={<Insert/>}/>
+            <Route path="display" element={<Display/>}/>
+            </Route>
+        </Routes>
+        </BrowserRouter>
+        
         </>
     )
 }
