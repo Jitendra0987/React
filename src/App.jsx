@@ -1,39 +1,45 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 
 const App=()=>{
-    const[mydata,setdata]=useState([]);
-    const loaddata=()=>{
-        let api="http://localhost:3000/data";
-        axios.get(api).then((res)=>{
-           setdata(res.data);
-           console.log(res.data);
-        })
+    const[mydata,setData]=useState([]);
+
+    const loaddata=async()=>{
+        let api="http://localhost:3000/data"
+         const response=await  axios.get(api);
+         setData(response.data)
+         console.log(response)
     }
+
     useEffect(()=>{
-      loaddata();
-         
+        loaddata();
     },[])
-     const ans=mydata.map((key)=>{
-        <tr>
-        <td>{key.rollno}</td>
-        <td>{key.name}</td>
-        <td>{key.city}</td>
-        <td>{key.fees}</td>
-        </tr>
-     })
+
+    const ans=mydata.map((key)=>{
+        return(
+            <>
+            <tr>
+                <td>{key.id}</td>
+                <td>{key.rollno}</td>
+                <td>{key.name}</td>
+                <td>{key.contact}</td>
+            </tr>
+            </>
+        )
+    })
+
     return(
         <>
-       <h1>welcome to cybrom student</h1>
-       <table>
-        <tr>
-            <th>ROLLNO</th>
-            <th>NAME</th>
-            <th>CITY</th>
-            <th>FEES</th>
-        </tr>
-       </table>
+           <table>
+            <tr>
+                <th>id</th>
+                <th>rollno</th>
+                <th>name</th>
+                <th>contact</th>
+            </tr>
+            {ans}
+           </table>
         </>
     )
 }

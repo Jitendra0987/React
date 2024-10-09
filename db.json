@@ -8,27 +8,27 @@
             "contact":1234567
         },
         {
-            "id":1,
-            "rollno":"12345",
-            "name":"arjun",
+            "id":2,
+            "rollno":"12346",
+            "name":"karan",
             "contact":1234567
         },
         {
-            "id":1,
-            "rollno":"12345",
-            "name":"arjun",
+            "id":4,
+            "rollno":"12347",
+            "name":"namo",
             "contact":1234567
         },
         {
-            "id":1,
-            "rollno":"12345",
-            "name":"arjun",
+            "id":5,
+            "rollno":"12348",
+            "name":"ramu",
             "contact":1234567
         },
         {
-            "id":1,
-            "rollno":"12345",
-            "name":"arjun",
+            "id":6,
+            "rollno":"12348",
+            "name":"shyamu",
             "contact":1234567
         }
     ]
