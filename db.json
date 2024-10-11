@@ -1,35 +1,34 @@
-
 {
-    "data":[
-        {
-            "id":1,
-            "rollno":"12345",
-            "name":"arjun",
-            "contact":1234567
-        },
-        {
-            "id":2,
-            "rollno":"12346",
-            "name":"karan",
-            "contact":1234567
-        },
-        {
-            "id":4,
-            "rollno":"12347",
-            "name":"namo",
-            "contact":1234567
-        },
-        {
-            "id":5,
-            "rollno":"12348",
-            "name":"ramu",
-            "contact":1234567
-        },
-        {
-            "id":6,
-            "rollno":"12348",
-            "name":"shyamu",
-            "contact":1234567
-        }
-    ]
+  "Employee": [
+    {
+      "empno": "1234",
+      "name": "karan",
+      "email": "karn@gmail.com",
+      "contact": 12367668
+    },
+    {
+      "empno": "1235",
+      "name": "arjun",
+      "email": "arjun@gmail.com",
+      "contact": 12388988
+    },
+    {
+      "empno": "1236",
+      "name": "aryan",
+      "email": "aryan@gmail.com",
+      "contact": 12757676
+    },
+    {
+      "empno": "1237",
+      "name": "bhola",
+      "email": "bhola@gmail.com",
+      "contact": 12465768
+    },
+    {
+      "empno": "1238",
+      "name": "ramu",
+      "email": "ramu@gmail.com",
+      "contact": 5776656
+    }
+  ]
 }

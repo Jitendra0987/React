@@ -1,51 +1,35 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-
+import { useEffect,useState } from "react";
 
 
 const Display=()=>{
-    const[empdata,setEmpdata]=useState([]);
+    const [mydata, setMydata]=useState([]);
 
-      const loadData=()=>{
-        let url="http://localhost:3000/data";
-        axios.get(url).then((respo)=>{
-            console.log(respo.data)
-            setEmpdata(respo.data);
-        })
+   const loaddata=()=>{
+    let upi="http://localhost:3000/data";
+    axios.get(upi).then((res)=>{
+        setMydata(res.data)
+        console.log(res.data)
+    })
+   }
 
-      }
+   useEffect(()=>{
+    loaddata();
+   },[])
 
-      useEffect(()=>{
-        loadData();
-
-      },[])
-
-      const ans=empdata.map((e)=>{
-        return(
-            <>
-            <tr>
-                <td>{e.id}</td>
-                <td>{e.rollno}</td>
-                <td>{e.name}</td>
-                <td>{e.contact}</td>
-            </tr>
-            </>
-        )
-      })
-
+   const amam=mydata.map((e)=>{
     return(
         <>
-        <h1>Display page</h1>
-
-        <table>
-            <tr>
-                <th>id</th>
-                <th>rollno</th>
-                <th>name</th>
-                <th>contact</th>
-            </tr>
-            {ans}
-        </table>
+        <h2>{e.id}</h2>
+        <h2>{e.rollno}</h2>
+        <h2>{e.name}</h2>
+        <h2>{e.contact}</h2>
+        </>
+    )
+   })
+    return(
+        <>
+        {amam}
         </>
     )
 }

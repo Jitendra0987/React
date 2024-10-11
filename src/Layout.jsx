@@ -4,12 +4,14 @@ import { Outlet ,Link} from "react-router-dom";
 const Layout=()=>{
     return(
         <>
-        <Link to="home" >Home</Link> 
-        <Link to="insert" >Insert Data</Link> 
-        <Link to="display">Display data</Link>
-        <hr size="4" color="red"/>
+        <Link to="home">Home</Link>
+        <Link to="display">Display</Link>
+        <Link to="insert">Insert</Link>
+        <Link to="search">Search</Link>
+        <Link to="searchbyname">SearchByName</Link>
+        <hr / >
         <Outlet/>
-        <hr size="4" color="red"/>
+        <hr />
         </>
     )
 }

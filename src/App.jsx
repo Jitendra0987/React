@@ -1,26 +1,27 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./pages/home";
 import Display from "./pages/Display";
 import Insert from "./pages/Insert";
-import  Layout  from "./Layout";
-import Home from "./pages/home";
-
-
-
+import Search from "./pages/Search";
+import SearchByName from "./pages/saerchByName";
 
 const App=()=>{
     return(
         <>
         <BrowserRouter>
-        <Routes>
+         <Routes>
             <Route path="/" element={<Layout/>}>
-            <Route index  element={<Home/>}/>
-            <Route path="home" element={<Home/>}/>
-            <Route path="insert" element={<Insert/>}/>
-            <Route path="display" element={<Display/>}/>
+            <Route index   element={<Home></Home>}/>
+            <Route path="home"  element={<Home></Home>}/>
+            <Route path="display"  element={<Display/>}/>
+            <Route path="insert"  element={<Insert/>}/>
+            <Route path="search"  element={<Search/>}/>
+            <Route path="searchbyname"  element={<SearchByName/>}/>
             </Route>
-        </Routes>
+
+         </Routes>
         </BrowserRouter>
-        
         </>
     )
 }
