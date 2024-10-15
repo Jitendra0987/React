@@ -3,22 +3,23 @@ import { useState } from "react";
 
 
 const SearchByName=()=>{
-    const [ename,setEname]=useState("");
-    const [myData,setMyData]=useState([]);
-    const handleChange=(e)=>{
-        let empname=e.target.value;
-        setEname(empname);
-        let api=`http://localhost:3000/Employee`;
+     const[ename,setEname]=useState("");
+     const[mydata,setMyData]=useState([]);
+
+     const handlesubmit=(e)=>{
+        let empl=e.target.value;
+        setEname(empl)
+        let api=(`http://localhost:3000/Employee`)
         axios.get(api).then((res)=>{
-            setMyData(res.data);
-            cconsole.log(res.data);
+            setMyData(res.data)
         })
-    }
-    const ans=myData.map((key)=>{
+
+     }
+
+     const ans=mydata.map((key)=>{
         let str=key.name;
-        let mystatus=str.includes(ename);
-        console.log(mystatus);
-        if (mystatus)
+        let mystatus=str.includes(ename)
+        if(mystatus)
         {
             return(
                 <>
@@ -28,20 +29,21 @@ const SearchByName=()=>{
                     <td>{key.email}</td>
                     <td>{key.contact}</td>
                 </tr>
+    
                 </>
             )
         }
-    })
+       
+     })
+
+
     return(
         <>
-        <h1>Search Employee REcords</h1>
-        type emp name : <input type="text" value={ename} onChange={handleChange}/>
-
-        <hr size="5" color="green" / >
-
+        Entar name : <input type="text"  value={ename}  onChange={handlesubmit}/>   
+        
         <table>
             <tr>
-                <th>emp no</th>
+                <th>ename</th>
                 <th>name</th>
                 <th>email</th>
                 <th>contact</th>
