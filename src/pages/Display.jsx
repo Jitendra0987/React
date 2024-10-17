@@ -6,8 +6,8 @@ const Display=()=>{
     const [mydata, setMydata]=useState([]);
 
    const loaddata=()=>{
-    let upi="http://localhost:3000/data";
-    axios.get(upi).then((res)=>{
+    let api="http://localhost:3000/data";
+    axios.get(api).then((res)=>{
         setMydata(res.data)
         console.log(res.data)
     })

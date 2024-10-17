@@ -6,7 +6,9 @@ import Insert from "./pages/Insert";
 import Search from "./pages/Search";
 import SearchByName from "./pages/saerchByName";
 import Update from "./pages/Update";
-import Edit from "./Edit";
+import Edit from "./pages/Edit";
+
+
 
 const App=()=>{
     return(
@@ -21,12 +23,13 @@ const App=()=>{
             <Route path="search"  element={<Search/>}/>
             <Route path="searchbyname"  element={<SearchByName/>}/>
             <Route path="update"  element={<Update/>}/>
-            <Route path="edit"  element={<Edit/>}/>
+            <Route path="editrec/:myid"  element={<Edit/>}/>
             </Route>
-
          </Routes>
         </BrowserRouter>
         </>
     )
 }
 export default App;
+
+

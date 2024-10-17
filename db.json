@@ -1,37 +1,23 @@
 {
   "Employee": [
     {
-      "empno": "1234",
-      "name": "karan",
-      "email": "karn@gmail.com",
-      "contact": 12367668
+      "id": "1",
+      "empno": "1239",
+      "name": "bahanu",
+      "email": "bhanu@gmail.com",
+      "contact": "44661322364"
     },
     {
-      "empno": "1235",
-      "name": "arjun",
-      "email": "arjun@gmail.com",
-      "contact": 12388988
-    },
-    {
-      "empno": "1236",
-      "name": "aryan",
-      "email": "aryan@gmail.com",
-      "contact": 12757676
-    },
-    {
-      "empno": "1237",
-      "name": "bhola",
-      "email": "bhola@gmail.com",
-      "contact": 12465768
-    },
-    {
-      "empno": "1238",
-      "name": "ramu",
+      "id": "2",
+      "empno": "1239",
+      "name": "samu",
       "email": "ramu@gmail.com",
       "contact": 5776656
-    },{
-      "empno": "1238",
-      "name": "ramu",
+    },
+    {
+      "id": "3",
+      "empno": "1240",
+      "name": "ganguu",
       "email": "ramu@gmail.com",
       "contact": 5776656
     }
