@@ -1,11 +1,9 @@
-import Comp3 from "./Comp3";
 
-const Comp2=({user})=>{
+
+const Comp2=()=>{
     return(
         <>
-        <h1>comp2</h1>
-        <Comp3 user={user} />
-        
+        <h1>component=2</h1>
 
         </>
     )

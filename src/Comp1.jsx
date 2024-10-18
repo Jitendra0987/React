@@ -1,12 +1,13 @@
-import Comp2 from "./Comp2";
-const Comp1=({user})=>{
+import Comp5 from "./comp5";
+
+const Comp1=()=>{
     return(
         <>
-          <h1>comp1 </h1>
-          <Comp2 user={user} />
+        <h1>component=1</h1>
+        <Comp5/>
+        
+
         </>
     )
-    
-
 }
 export default Comp1;
