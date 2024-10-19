@@ -1,14 +1,12 @@
-import { useContext } from "react";
-import { userContext } from "./App";
-
+  import { myCon } from "./App";
+  import { useContext } from "react";
 
 const Bhopal=()=>{
-    const {user, setUser}=useContext(userContext)
+const {user,Setuser}=useContext(myCon);
     return(
         <>
-      <h1>wellcome to bhopal : : name : {user}</h1>
-      <button onClick={()=>{setUser("nisha")}}>click</button>
-
+             <h1>Welcome to bhopal : {user}</h1>
+             <button onClick={()=>{Setuser("nisha")}}>Click</button>
         </>
     )
 }

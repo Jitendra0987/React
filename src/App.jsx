@@ -1,21 +1,20 @@
-import { createContext ,useState} from "react";
-import Comp1 from "./comp1"
+import { createContext, useState } from "react";
+import Cbrom from "./Cbrom";
 
-
-const mycontext=createContext();
-
-
-
+const myCon=createContext();
 const App=()=>{
-  const [user,setUser]=useState("jitendra")
+const [user,Setuser]=useState("JITENDRA");
+
   return(
     <>
-    <h1>wellcome : {user}</h1>
-    <mycontext.Provider value={{user}}>
-        <Comp1/>
-    </mycontext.Provider>
+    <h1>{user}</h1>
+
+    <myCon.Provider value={{user,Setuser}}>
+     <Cbrom/>
+    </myCon.Provider>
+        
     </>
   )
 }
 export default App;
-export{mycontext}
+export {myCon};
