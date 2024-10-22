@@ -1,0 +1,38 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+}
+.one{
+    border: solid ;
+    border-radius: 10px;
+    background-color: blue;
+    width: 600px;
+    height: 300px;
+}
+.two{
+    border: solid;
+    border-radius: 10px;
+    background-color:yellow;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-top: 45px;
+}
+.three{
+    background-color: red;
+    border: solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    margin: auto ;
+    margin-top: 42px;
+}
+#hh{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9px;
+}

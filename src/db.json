@@ -1,0 +1,48 @@
+{
+    "Employ":[{
+        "id":120,
+        "name":"ayushi singh baghel",
+        "city":"bhopal",
+        "salary":200000
+        },
+        {
+          "id":121,
+          "name":"abhiuday singh baghel",
+          "city":"rewa",
+          "salary":200000
+          },
+          {
+            "id":123,
+            "name":"anjali singh baghel",
+            "city":"jablpur",
+            "salary":200000
+            },
+            {
+              "id":124,
+              "name":"chahak nigam",
+              "city":"indore",
+              "salary":200000
+              },
+              {
+                "id":125,
+                "name":"krish patne",
+                "city":"satna",
+                "salary":200000
+                },
+                {
+                  "id":126,
+                  "name":"ritik raj",
+                  "city":"raipur",
+                  "salary":200000
+                  },
+                  {
+                    "id":127,
+                    "name":"anurag ningwall",
+                    "city":"ujjain",
+                    "salary":200000
+                    }
+        
+        
+        
+        ]
+    }
