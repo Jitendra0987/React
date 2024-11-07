@@ -1,26 +1,19 @@
-import { BrowserRouter, Routes,Route } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./Home";
-import About from "./About";
-import Faculty from "./Faculty";
-import Contactus from "./Contactus";
-import Ourcourse from "./Ourcourse";
+import { useSelector,useDispatch } from "react-redux";
+import { colorChange } from "./bgcolorSlice";
 
 const App=()=>{
-  return(
-    <>
-     <BrowserRouter>
-     <Routes>
-      <Route  path="/" element={<Layout/>}>
-      <Route path="home"  element={<Home/>}/>
-      <Route path="about"  element={<About/>}/>
-      <Route path="contact"  element={<Faculty/>}/>
-      <Route path="ourcourse" element={<Ourcourse/>}/>
-      <Route path="contactus" element={<Contactus/>}/>
-       </Route>
-     </Routes>
-     </BrowserRouter>
-    </>
-  )
+    const myclr=useSelector((state)=>state.mycolor.bgclr);
+    const dispatch=useDispatch();
+    console.log(myclr);
+    return(
+        <>
+        <h1>this is my counter program</h1>
+        <button onClick={()=>{dispatch(colorChange())}}>click here</button>
+        <div style={{width:"300px",height:"200px",backgroundColor:myclr}}>
+
+        </div>
+
+        </>
+    )
 }
 export default App;
