@@ -1,23 +1,46 @@
-
 import { useState } from "react";
-import { useSelector,useDispatch} from "react-redux";
-import { colorChange } from "./bgcolorSlice";
+import { useDispatch,useSelector } from "react-redux";
+import { addData } from "./todoSlice";
+
 
 const App=()=>{
-  const [color,setcolor]=useState("")
-  const bgclr=useSelector((state)=>state.mycolor.bgcolor);
-  const dispatch=useDispatch();
-  return(
-    <>
+    const [data,setData]=useState("");
+    const Data=useSelector((state)=>state.todo.task);
+    console.log(Data);
+    const dispatch=useDispatch();
+    const txtDataAdd=()=>{
+        dispatch(addData({id:Data.now(), work:data}));
+    }
+    let sno=0;
+    const ans = data.localeCompare((key)=>{
+        sno++
+        return(
+            <>
+            <tr>
+                <td>{sno}</td>
+                <td>{key.work}</td>
+                
+            </tr>
+            </>
+        )
+    })
+    return(
+        <>
 
-<h1> bg color change program</h1>
+        <h1> to do App</h1>
+        Enter Task : <input type="text" value={data}
+        onChange={(e)=>{setData(e.target.value)}}/>
+        <button onClick={txtDataAdd}>Add</button>
+        <hr />
+        <table>
+            <tr>
+                <td>sno</td>
+                <td>your Task</td>
+            </tr>
+            {ans}
+        </table>
 
-Enter color : <input type="text " value={color} onChange={(e)=>{setcolor(e.target.value)}}/>
-<button onClick={()=>{dispatch(colorChange(color))}}>click</button> <br /><br />
-<div style={{width:"300px",height:"200px",border:"1px solid black",backgroundColor:bgclr}}>
-
-</div>
-    </>
-  )
+        </>
+    )
 }
 export default App;
